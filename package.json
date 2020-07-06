@@ -1,6 +1,6 @@
 {
   "name": "wfo-toolbox-ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "dCloud Cisco Workforce Optimization v1 Instant Demo toolbox UI. Intended to run on toolbox1 and toolbox2 servers in dCloud shared services.",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --progress",
