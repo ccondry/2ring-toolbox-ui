@@ -3,6 +3,13 @@
 Dates are in YYYY-MM-DD format
 
 
+# 1.1.1 (2020-09-17)
+
+### Features
+
+* **Site:** Update titles and headers to 2RING Dashboards & Wallboards
+
+
 # 1.1.0 (2020-09-17)
 
 ### Features
