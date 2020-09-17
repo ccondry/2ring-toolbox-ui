@@ -7,7 +7,7 @@
           <h1 class="title">Welcome</h1>
           <b-field>
             <p>
-              Welcome to the Cisco Workforce Optimization v1 Instant Demo on dCloud.
+              Welcome to the 2RING Dashboards & Wallboards Instant Demo on dCloud.
             </p>
           </b-field>
           <b-field>

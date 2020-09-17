@@ -2,7 +2,7 @@
   <b-navbar class="app-navbar">
         <template slot="start">
           <b-navbar-item tag="div">
-            <a href="/">dCloud Toolbox</a>&nbsp;- Cisco Workforce Optimization v1 Instant Demo
+            <a href="/">dCloud Toolbox</a>&nbsp;- 2RING Dashboards & Wallboards Instant Demo
           </b-navbar-item>
         </template>
 
