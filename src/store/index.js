@@ -16,7 +16,7 @@ const store = new Vuex.Store({
   getters,
   modules,
   state: {
-    demoConfigId: 'wfo',
+    demoConfigId: '2ring',
     isProduction,
     working: {
       app: {},

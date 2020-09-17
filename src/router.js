@@ -13,7 +13,7 @@ export default new VueRouter({
     ...generateRoutesFromMenu(menuModule.state.items),
     {
       path: '*',
-      redirect: '/wfo/main/home'
+      redirect: '/2ring/main/home'
     }
   ]
 })

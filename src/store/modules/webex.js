@@ -3,7 +3,7 @@ const actions = {
     // metadata
     const group = 'webex'
     const type = 'invite'
-    const action = 'Add user to the WFO Demo Support Webex Teams room'
+    const action = 'Add user to the 2ring Demo Support Webex Teams room'
     // set working state on
     dispatch('setWorking', {group, type, value: true})
     console.log('starting', action, 'using email', email, '...')

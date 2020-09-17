@@ -1,6 +1,6 @@
 import lazyLoading from './lazyLoading'
 
-const path = '/wfo/main'
+const path = '/2ring/main'
 
 export default {
   name: 'Main',

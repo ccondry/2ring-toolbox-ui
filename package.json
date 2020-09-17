@@ -1,5 +1,5 @@
 {
-  "name": "wfo-toolbox-ui",
+  "name": "2ring-toolbox-ui",
   "version": "1.0.1",
   "description": "dCloud Cisco Workforce Optimization v1 Instant Demo toolbox UI. Intended to run on toolbox1 and toolbox2 servers in dCloud shared services.",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ccondry/wfo-toolbox-ui"
+    "url": "git+https://github.com/ccondry/2ring-toolbox-ui"
   },
   "keywords": [
     "Vue",
@@ -17,7 +17,7 @@
   ],
   "author": "ccondry <ccondry@cisco.com>",
   "license": "MIT",
-  "homepage": "https://github.com/ccondry/wfo-toolbox-ui",
+  "homepage": "https://github.com/ccondry/2ring-toolbox-ui",
   "dependencies": {
     "buefy": "^0.8.6",
     "vue": "~2.6",

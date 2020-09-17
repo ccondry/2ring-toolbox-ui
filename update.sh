@@ -23,7 +23,7 @@ else
       if [ $? -eq 0 ]; then
         echo "npm build successful"
         echo "copying new web files"
-        cp -rf dist/* /var/www/toolbox/wfo/
+        cp -rf dist/* /var/www/toolbox/2ring/
       else
         echo "npm failed to run build script"
       fi

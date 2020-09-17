@@ -12,7 +12,7 @@ const endpoints = {
   login: authBaseUrl + '/login',
   logout: authBaseUrl + '/logout',
   user: authBaseUrl + '/user',
-  webex: authBaseUrl + '/resource/joinWfoSupportRoom',
+  webex: authBaseUrl + '/resource/join2ringSupportRoom',
   authApiInfo: authBaseUrl + '/version'
 }
 
