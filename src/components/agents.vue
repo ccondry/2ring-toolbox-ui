@@ -25,7 +25,7 @@
     <center>
       <b-field>
         <button class="button is-success" @click="clickPortal">
-          Workforce Optimization Portal
+          2RING Dashboards & Wallboards
         </button>
       </b-field>
     </center>
@@ -44,7 +44,7 @@ export default {
 
   data () {
     return {
-      portalUrl: 'https://se1.calabriodemo.com',
+      portalUrl: 'https://www.2ring.com/dcloud',
       clipboard: ''
     }
   },
@@ -53,17 +53,17 @@ export default {
     agents () {
       return [
         {
-          picture: 'https://mm.cxdemo.net/static/images/cumulus/common/author1.png',
-          username: 'sandra.jefferson@ciscodcloud.com',
+          picture: 'https://mm.cxdemo.net/static/images/cumulus/common/helen.png',
+          username: 'Helen.Liang@ciscodcloud.com',
           password: 'C1sco12345',
-          name: 'Sandra Jefferson',
+          name: 'Helen Liang',
           role: 'Contact Center Agent'
         },
         {
-          picture: 'https://mm.cxdemo.net/static/images/cumulus/common/author3.png',
-          username: 'rick.barrows@ciscodcloud.com',
+          picture: 'https://mm.cxdemo.net/static/images/cumulus/common/james.png',
+          username: 'James.Bracksted@ciscodcloud.com',
           password: 'C1sco12345',
-          name: 'Rick Barrows',
+          name: 'James Bracksted',
           role: 'Contact Center Supervisor'
         }
       ]
