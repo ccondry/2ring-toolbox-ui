@@ -25,7 +25,7 @@
     <center>
       <b-field>
         <button class="button is-success" @click="clickPortal">
-          2RING Dashboards & Wallboards
+          2Ring Dashboards & Wallboards
         </button>
       </b-field>
     </center>
