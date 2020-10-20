@@ -3,6 +3,13 @@
 Versions are dates in YYYY.MM.DD-X format where X is revision number
 
 
+# 2020.10.20-1
+
+### Bug Fixes
+* **Site:** use a instead of button with javascript to open  2ring portal to
+fix cookie/iframe issue
+
+
 # 2020.10.20
 
 ### Bug Fixes
