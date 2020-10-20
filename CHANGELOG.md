@@ -1,6 +1,12 @@
-# Change Log
+# Change Log for 2ring-toolbox-ui
 
-Dates are in YYYY-MM-DD format
+Versions are dates in YYYY.MM.DD-X format where X is revision number
+
+
+# 2020.10.20
+
+### Bug Fixes
+* **Site:** use direct link to 2ring portal to fix cookie/iframe issue
 
 
 # 1.1.2 (2020-09-23)
