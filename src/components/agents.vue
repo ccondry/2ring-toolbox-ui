@@ -44,7 +44,8 @@ export default {
 
   data () {
     return {
-      portalUrl: 'https://www.2ring.com/dcloud',
+      // portalUrl: 'https://www.2ring.com/dcloud',
+      portalUrl: 'https://demo.2ring.com/dw80',
       clipboard: ''
     }
   },
