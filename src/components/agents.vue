@@ -24,9 +24,9 @@
     </div>
     <center>
       <b-field>
-        <button class="button is-success" @click="clickPortal">
+        <a class="button is-success" :href="portalUrl" target="_blank">
           2Ring Dashboards & Wallboards
-        </button>
+        </a>
       </b-field>
     </center>
 
@@ -44,8 +44,8 @@ export default {
 
   data () {
     return {
-      // portalUrl: 'https://www.2ring.com/dcloud',
-      portalUrl: 'https://demo.2ring.com/dw80',
+      portalUrl: 'https://www.2ring.com/dcloud',
+      // portalUrl: 'https://demo.2ring.com/dw80',
       clipboard: ''
     }
   },
