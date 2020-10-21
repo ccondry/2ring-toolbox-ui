@@ -3,6 +3,13 @@
 Versions are dates in YYYY.MM.DD-X format where X is revision number
 
 
+# 2020.10.21
+
+### Bug Fixes
+* **Portal Link:** use noopener, noreferrer options to help 2ring web app
+cookies work properly in all browsers
+
+
 # 2020.10.20-1
 
 ### Bug Fixes
