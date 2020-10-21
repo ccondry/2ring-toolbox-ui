@@ -24,9 +24,9 @@
     </div>
     <center>
       <b-field>
-        <a class="button is-success" :href="portalUrl" target="_blank">
+        <b-button type="is-success" @click="clickPortal">
           2Ring Dashboards & Wallboards
-        </a>
+        </b-button>
       </b-field>
     </center>
 
@@ -76,8 +76,9 @@ export default {
       'copyToClipboard'
     ]),
     clickPortal (e) {
-      // open agent portal in new tab
-      window.open(this.portalUrl, '_blank')
+      // open agent portal in new window
+      // noopener, noreferrer options are to help 2ring web app cookies work
+      window.open(this.portalUrl, '_blank', 'noopener, noreferrer')
     },
     clickCopy (string, type) {
       // copy string to clipboard
