@@ -1,4 +1,4 @@
-import lazyLoading from './lazyLoading'
+import Home from '../../../views/main/home.vue'
 
 const path = '/2ring/main'
 
@@ -17,7 +17,7 @@ export default {
         icon: 'home',
         description: 'home'
       },
-      component: lazyLoading('main/home')
+      component: Home
     }
   ]
 }

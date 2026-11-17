@@ -1,32 +1,25 @@
 <template>
-  <div>
+  <div id="app" class="app-shell">
+    <!-- page background glow -->
+    <ambient-bg />
     <b-loading :is-full-page="true" :active="!authCheckDone" :can-cancel="false"></b-loading>
-    <div v-if="authenticated" style="min-height: calc(100vh - 1.6em);">
+    <div v-if="authenticated" class="app-page">
       <!-- endpoints have not finished loading yet -->
       <b-loading :is-full-page="true" :active="!authCheckDone" :can-cancel="false"></b-loading>
-      <div v-if="authCheckDone">
+      <template v-if="authCheckDone">
         <!-- <nprogress-container></nprogress-container> -->
         <navbar :show="true"></navbar>
         <!-- <sidebar :show="sidebar.opened && !sidebar.hidden"></sidebar> -->
         <app-main></app-main>
-      </div>
+      </template>
     </div>
-    <footer class="footer" style="height: 1.6em; padding: 0; background-color: #ebebeb">
-      <div class="content">
-        <small style="padding-right: 2em; padding-left: 1em;">
-          UI version {{ uiVersion }}
-        </small>
-        <small>
-          Auth API version {{ authApiVersion }}
-        </small>
-      </div>
-    </footer>
   </div>
 </template>
 
 
 <script>
 // import NprogressContainer from 'vue-nprogress/src/NprogressContainer'
+import AmbientBg from './components/ambient-bg.vue'
 import Navbar from './components/layout/Navbar'
 import Sidebar from './components/layout/Sidebar'
 import AppMain from './components/layout/AppMain'
@@ -41,6 +34,7 @@ export default {
   },
 
   components: {
+    AmbientBg,
     Navbar,
     Sidebar,
     AppMain
@@ -148,3 +142,13 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.app-page {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+</style>

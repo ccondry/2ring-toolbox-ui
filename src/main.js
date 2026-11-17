@@ -2,11 +2,15 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Buefy from 'buefy'
-import 'buefy/dist/buefy.css'
 import { sync } from 'vuex-router-sync'
+import '@fontsource/inter/latin-400'
+import '@fontsource/inter/latin-500'
+import '@fontsource/inter/latin-600'
+import '@fontsource/inter/latin-700'
+// theme variables, then bulma and buefy source
+import './style.scss'
 // Import Vue App, routes, store
 import App from './App'
-import routes from './routes'
 import router from './router'
 import store from './store'
 
@@ -14,8 +18,6 @@ Vue.use(VueRouter)
 Vue.use(Buefy)
 
 sync(store, router)
-
-const { state } = store
 
 new Vue({
     el: '#app',

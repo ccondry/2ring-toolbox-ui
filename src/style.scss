@@ -1,0 +1,155 @@
+// Vision / Figma catalog palette
+$app-bg: #0B1118;
+$surface: #101a24;
+$surface-raised: #131a23;
+$card-surface: rgba(11, 16, 28, 0.97);
+$accent: #7cadf7;
+$accent-hover: #a3c8ff;
+$accent-active: #bad6ff;
+$accent-cyan: #6eaffd;
+$status-green: #00a88f;
+$status-red: #ff5c4a;
+$status-yellow: #d67f04;
+$fg-strong: #ffffff;
+$fg: rgba(255, 255, 255, 0.85);
+$fg-muted: rgba(255, 255, 255, 0.55);
+$fg-faint: rgba(255, 255, 255, 0.4);
+$hairline: rgba(255, 255, 255, 0.08);
+
+// set fonts in bulma
+$family-primary: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$family-sans-serif: $family-primary;
+
+// set bulma colors to the dark glass palette
+$primary: $accent;
+$primary-invert: $surface;
+$info: $accent-cyan;
+$info-invert: $surface;
+$link: $accent-cyan;
+$link-hover: $accent-hover;
+$success: $status-green;
+$danger: $status-red;
+$warning: $status-yellow;
+
+$scheme-main: $surface;
+$scheme-main-bis: $surface-raised;
+$scheme-main-ter: $surface-raised;
+$scheme-invert: $fg-strong;
+$background: $surface-raised;
+$border: rgba(255, 255, 255, 0.14);
+$border-hover: rgba(255, 255, 255, 0.28);
+$border-light: $hairline;
+$text: $fg;
+$text-light: $fg-muted;
+$text-strong: $fg-strong;
+$body-background-color: $app-bg;
+$body-color: $fg;
+
+$input-background-color: rgba(255, 255, 255, 0.04);
+$input-color: $fg-strong;
+$input-placeholder-color: $fg-faint;
+$input-border-color: rgba(255, 255, 255, 0.14);
+$input-hover-border-color: rgba(255, 255, 255, 0.28);
+$input-focus-border-color: $accent;
+$input-focus-box-shadow-color: rgba(124, 173, 247, 0.25);
+$label-color: $fg-strong;
+
+$modal-background-background-color: rgba(3, 6, 12, 0.7);
+$modal-card-head-background-color: $surface;
+$modal-card-head-border-bottom: 1px solid $hairline;
+$modal-card-title-color: $fg-strong;
+$modal-card-body-background-color: $surface;
+$modal-card-foot-border-top: 1px solid $hairline;
+
+$navbar-background-color: transparent;
+$navbar-item-color: $fg;
+$navbar-item-hover-color: $fg-strong;
+$navbar-item-hover-background-color: transparent;
+$navbar-item-active-color: $fg-strong;
+$navbar-item-active-background-color: transparent;
+$navbar-dropdown-background-color: $surface;
+
+$footer-background-color: transparent;
+
+// keep button hover and active states subtle on the dark background
+$button-darken-full: 0%;
+$button-darken-half: 0%;
+
+// import bulma source
+@import "~bulma";
+
+// import buefy source, to apply the variables above
+@import "~buefy/src/scss/buefy";
+
+.app-shell {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: clip;
+}
+
+// Figma catalog card: 2px gradient border, blue glow, dark frosted surface
+.box,
+.card {
+  position: relative;
+  border: 2px solid transparent;
+  border-radius: 14px;
+  background:
+    linear-gradient(var(--card-surface), var(--card-surface)) padding-box,
+    var(--card-border) border-box;
+  color: var(--fg);
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
+  box-shadow: 0 0 8px 2px var(--glow), 0 8px 32px -8px rgba(0, 0, 0, 0.45);
+  transition: box-shadow 0.2s ease-out;
+
+  &:hover {
+    box-shadow: 0 0 8px 2px var(--glow), 0 20px 48px -12px rgba(0, 0, 0, 0.6);
+  }
+
+  .title {
+    font-family: var(--font-heading);
+    color: var(--fg-strong);
+  }
+
+  .subtitle {
+    color: var(--fg-muted);
+  }
+
+  // cards inside cards: no stacked glows
+  .box,
+  .card {
+    box-shadow: none;
+  }
+}
+
+// glass navbar. `body` outranks Bulma's desktop-only navbar rules, which
+// postcss-sort-media-queries moves to the end of the stylesheet
+body .navbar {
+  background-color: rgba(11, 17, 24, 0.75);
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
+  border-bottom: 1px solid var(--hairline);
+  box-shadow: none;
+
+  .navbar-item,
+  .navbar-link {
+    color: var(--fg);
+  }
+
+  a.navbar-item:hover {
+    background-color: transparent;
+    color: var(--fg-strong);
+  }
+
+  .navbar-burger {
+    color: var(--fg-strong);
+  }
+
+  .navbar-menu {
+    background-color: transparent;
+  }
+}
+
+@import './theme.scss';

@@ -1,5 +1,11 @@
 <template>
   <b-navbar class="app-navbar">
+        <template slot="brand">
+          <b-navbar-item href="/" class="app-navbar-logo">
+            <cisco-mark />
+          </b-navbar-item>
+        </template>
+
         <template slot="start">
           <b-navbar-item tag="div">
             <a href="/">dCloud Toolbox</a>&nbsp;- 2Ring Dashboards & Wallboards Instant Demo
@@ -20,8 +26,13 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
+import CiscoMark from '../cisco-mark.vue'
 
 export default {
+  components: {
+    CiscoMark
+  },
+
   data () {
     return {
       filter: ''
@@ -82,15 +93,25 @@ export default {
 // @import '~bulma/sass/utilities/variables';
 
 .app-navbar {
-  color: #28374B;
   font-weight: bold;
   a {
-    color: #7957d5;
+    color: var(--accent-cyan);
   }
   position: fixed;
   min-width: 100%;
   z-index: 4;
-  box-shadow: 0 2px 3px rgba(17, 17, 17, 0.1), 0 0 0 1px rgba(17, 17, 17, 0.1);
+
+  .app-navbar-logo {
+    padding-left: 16px;
+    color: var(--fg-strong);
+
+    .cisco-mark {
+      display: block;
+      width: 38px;
+      height: 24px;
+      max-height: none;
+    }
+  }
 
   .nav {
     min-height: 0em;

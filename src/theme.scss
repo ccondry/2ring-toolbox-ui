@@ -1,0 +1,239 @@
+// dark glass theme from the Vision Figma catalog page
+
+:root {
+  --app-bg: #{$app-bg};
+  --surface: #{$surface};
+  --surface-raised: #{$surface-raised};
+  --card-surface: #{$card-surface};
+  --accent: #{$accent};
+  --accent-hover: #{$accent-hover};
+  --accent-active: #{$accent-active};
+  --accent-cyan: #{$accent-cyan};
+  --fg-strong: #{$fg-strong};
+  --fg: #{$fg};
+  --fg-muted: #{$fg-muted};
+  --fg-faint: #{$fg-faint};
+  --hairline: #{$hairline};
+  --font-body: #{$family-primary};
+  --font-heading: "Sharp Sans", #{$family-primary};
+  --glow: rgba(110, 175, 253, 0.3);
+  --glow-strong: rgba(110, 175, 253, 0.28);
+  --card-border: linear-gradient(135deg, rgba(110, 175, 253, 0.45) 0%, rgba(255, 255, 255, 0.12) 50%, rgba(110, 175, 253, 0.25) 100%);
+  --shimmer: conic-gradient(transparent 0deg, rgba(110, 175, 253, 0) 5deg, rgba(110, 175, 253, 0.7) 40deg, rgb(160, 210, 255) 80deg, rgb(255, 255, 255) 100deg, rgb(160, 210, 255) 120deg, rgba(110, 175, 253, 0.7) 160deg, transparent 200deg, transparent 360deg);
+  --transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html,
+body {
+  min-height: 100vh;
+  background-color: var(--app-bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color-scheme: dark;
+}
+
+strong,
+.title,
+.label {
+  color: var(--fg-strong);
+}
+
+a {
+  color: var(--accent-cyan);
+  transition: color var(--transition);
+
+  &:hover {
+    color: var(--accent-hover);
+  }
+}
+
+// Figma outline button: accent border on the surface color
+.button {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14px;
+  height: auto;
+  padding: 5px 14px;
+  border-width: 2px;
+  border-radius: 6px;
+  box-shadow: none;
+  transition: all var(--transition);
+
+  &.is-rounded {
+    border-radius: 6px;
+  }
+
+  &:focus-visible,
+  &.is-focused {
+    box-shadow: 0 0 0 2px var(--app-bg), 0 0 0 4px var(--accent);
+  }
+}
+
+@mixin outline-button($color, $hover, $active) {
+  background-color: var(--surface);
+  border-color: $color;
+  color: $color;
+
+  &:hover,
+  &.is-hovered {
+    background-color: rgba($color, 0.1);
+    border-color: $hover;
+    color: $hover;
+  }
+
+  &:active,
+  &.is-active {
+    background-color: rgba($color, 0.15);
+    border-color: $active;
+    color: $active;
+  }
+
+  &:focus,
+  &.is-focused {
+    border-color: $color;
+    color: $color;
+  }
+
+  &:focus:not(:active) {
+    box-shadow: 0 0 0 2px var(--app-bg), 0 0 0 4px $color;
+  }
+
+  // Bulma fills disabled color buttons with $color, which hides the text
+  &[disabled],
+  fieldset[disabled] & {
+    background-color: var(--surface);
+    border-color: $color;
+    color: $color;
+    box-shadow: none;
+  }
+}
+
+.button.is-primary,
+.button.is-info,
+.button.is-link {
+  @include outline-button($accent, $accent-hover, $accent-active);
+}
+
+.button.is-success {
+  @include outline-button($status-green, lighten($status-green, 10%), lighten($status-green, 20%));
+}
+
+.button.is-danger {
+  @include outline-button($status-red, lighten($status-red, 10%), lighten($status-red, 20%));
+}
+
+.button:not(.is-primary):not(.is-info):not(.is-link):not(.is-success):not(.is-danger) {
+  background-color: transparent;
+  border-color: rgba(255, 255, 255, 0.2);
+  color: var(--fg);
+
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+    color: var(--fg-strong);
+  }
+}
+
+// Figma pill tag
+span.tag {
+  height: auto;
+  padding: 3px 10px;
+  border: 1px solid rgba(110, 175, 253, 0.3);
+  border-radius: 9999px;
+  background-color: rgba(110, 175, 253, 0.1);
+  color: var(--accent-cyan);
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+
+  &.is-info,
+  &.is-primary {
+    background-color: rgba(110, 175, 253, 0.1);
+    color: var(--accent-cyan);
+  }
+}
+
+// inputs inside dialogs
+.input,
+.textarea,
+.select select {
+  box-shadow: none;
+  border-radius: 10px;
+
+  &:focus,
+  &.is-focused {
+    box-shadow: none;
+  }
+}
+
+// modals and dialogs
+.modal-card,
+.dialog .modal-card {
+  border: 1px solid var(--hairline);
+  border-radius: 14px;
+  background-color: var(--surface);
+  box-shadow: 0 20px 48px -12px rgba(0, 0, 0, 0.6);
+}
+
+.modal-card-head,
+.modal-card-foot,
+.modal-card-body {
+  background-color: var(--surface);
+}
+
+.modal-card-title {
+  font-family: var(--font-heading);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.modal-background {
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+
+.dialog .modal-card .modal-card-body .media-content p {
+  color: var(--fg);
+}
+
+// toasts
+.toast {
+  border: 1px solid var(--hairline);
+  border-radius: 10px !important;
+  background-color: var(--surface) !important;
+  color: var(--fg-strong) !important;
+  font-family: var(--font-body);
+  font-size: 14px;
+  box-shadow: 0 8px 32px -8px rgba(0, 0, 0, 0.45);
+
+  &.is-success {
+    border-color: rgba($status-green, 0.6);
+  }
+
+  &.is-danger {
+    border-color: rgba($status-red, 0.6);
+  }
+}
+
+// full-page loading overlay
+.loading-overlay {
+  .loading-background {
+    background-color: rgba(11, 17, 24, 0.75);
+  }
+
+  .loading-icon::after {
+    border-color: transparent transparent var(--accent) var(--accent);
+  }
+}
+
+// dropdown menus (user menu)
+.dropdown-content {
+  border: 1px solid var(--hairline);
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
+  box-shadow: 0 20px 48px -12px rgba(0, 0, 0, 0.6);
+}
