@@ -1,6 +1,6 @@
 {
   "name": "2ring-toolbox-ui",
-  "version": "2020.10.21",
+  "version": "2026.11.18",
   "description": "dCloud 2Ring Dashboards & Wallboards Instant Demo toolbox UI. Intended to run on toolbox1 and toolbox2 servers in dCloud shared services.",
   "scripts": {
     "build": "rollup -c",
