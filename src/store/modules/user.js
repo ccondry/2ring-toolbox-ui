@@ -7,7 +7,8 @@ const state = {
 }
 
 const getters = {
-  user: state => state.user
+  user: state => state.user,
+  isAdmin: state => state.user.admin === true
 }
 
 const mutations = {

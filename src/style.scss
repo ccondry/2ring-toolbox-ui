@@ -124,32 +124,4 @@ $button-darken-half: 0%;
   }
 }
 
-// glass navbar. `body` outranks Bulma's desktop-only navbar rules, which
-// postcss-sort-media-queries moves to the end of the stylesheet
-body .navbar {
-  background-color: rgba(11, 17, 24, 0.75);
-  -webkit-backdrop-filter: blur(24px);
-  backdrop-filter: blur(24px);
-  border-bottom: 1px solid var(--hairline);
-  box-shadow: none;
-
-  .navbar-item,
-  .navbar-link {
-    color: var(--fg);
-  }
-
-  a.navbar-item:hover {
-    background-color: transparent;
-    color: var(--fg-strong);
-  }
-
-  .navbar-burger {
-    color: var(--fg-strong);
-  }
-
-  .navbar-menu {
-    background-color: transparent;
-  }
-}
-
 @import './theme.scss';

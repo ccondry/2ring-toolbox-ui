@@ -51,7 +51,7 @@ export default {
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding-top: 52px;
+  padding-top: 56px;
   transform: translate3d(0, 0, 0);
 }
 

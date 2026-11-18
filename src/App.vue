@@ -8,7 +8,7 @@
       <b-loading :is-full-page="true" :active="!authCheckDone" :can-cancel="false"></b-loading>
       <template v-if="authCheckDone">
         <!-- <nprogress-container></nprogress-container> -->
-        <navbar :show="true"></navbar>
+        <navbar></navbar>
         <!-- <sidebar :show="sidebar.opened && !sidebar.hidden"></sidebar> -->
         <app-main></app-main>
       </template>
